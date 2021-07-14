@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 502868780}
   - component: {fileID: 502868779}
   m_Layer: 0
-  m_Name: Text (4)
+  m_Name: BinaryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 637118501}
   - component: {fileID: 637118500}
   m_Layer: 0
-  m_Name: Text (6)
+  m_Name: DecimalText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1541,7 +1541,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1023725732}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1878000871}
+        m_TargetAssemblyTypeName: Converter, Assembly-CSharp
+        m_MethodName: ConvertValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1023725732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6958,7 +6970,7 @@ GameObject:
   - component: {fileID: 1510707060}
   - component: {fileID: 1510707059}
   m_Layer: 0
-  m_Name: Text (5)
+  m_Name: OctalText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7382,6 +7394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1878000870}
+  - component: {fileID: 1878000871}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -7404,6 +7417,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878000871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878000869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076c6be6e6e79f14a9151ab8ff8fa321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueInput: {fileID: 1162500294}
+  options: {fileID: 2119712819}
+  binaryText: {fileID: 502868779}
+  octalText: {fileID: 1510707059}
+  decimalText: {fileID: 637118500}
+  hexText: {fileID: 2102477178}
 --- !u!1 &2102477176
 GameObject:
   m_ObjectHideFlags: 0
@@ -7416,7 +7447,7 @@ GameObject:
   - component: {fileID: 2102477179}
   - component: {fileID: 2102477178}
   m_Layer: 0
-  m_Name: Text (7)
+  m_Name: HexText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7762,11 +7793,11 @@ MonoBehaviour:
     m_Options:
     - m_Text: Binary
       m_Image: {fileID: 0}
-    - m_Text: octal
+    - m_Text: Octal
       m_Image: {fileID: 0}
-    - m_Text: decimal
+    - m_Text: Decimal
       m_Image: {fileID: 0}
-    - m_Text: hexidecimal
+    - m_Text: Hexidecimal
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
